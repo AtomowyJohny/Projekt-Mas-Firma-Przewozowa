@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AtomowyProjekt.DodawaniePracownikaController">
+   <children>
+      <TextField fx:id="imieTextField" disable="true" layoutX="31.0" layoutY="68.0" promptText="imie" />
+      <MenuBar layoutY="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="nazwiskoTextField" disable="true" layoutX="31.0" layoutY="109.0" promptText="nazwisko" />
+      <TextField fx:id="peselTextField" disable="true" layoutX="31.0" layoutY="149.0" promptText="pesel" />
+      <TextField fx:id="nrTelTextField" disable="true" layoutX="31.0" layoutY="221.0" promptText="numer telefonu" />
+      <DatePicker fx:id="dataZatrudnieniaDatePicker" disable="true" layoutX="31.0" layoutY="187.0" promptText="data zatrudnieniea" />
+      <TextField fx:id="lataDoswiadczeniaTextField" disable="true" layoutX="435.0" layoutY="96.0" promptText="lata doswiadczenia" />
+      <TextField fx:id="typPrawaJazdyTextField" disable="true" layoutX="435.0" layoutY="136.0" promptText="typ prawa jazdy" />
+      <Text layoutX="195.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;- opcionalnie" />
+      <Text layoutX="435.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="dane kierowcy" />
+      <Text layoutX="435.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="dane mechanika" />
+      <ChoiceBox fx:id="lataDoswiadczeniaChoiseBox" disable="true" layoutX="435.0" layoutY="286.0" prefWidth="150.0" />
+      <Text layoutX="435.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doswiadczenie: od 0 do 10" />
+      <Text layoutX="208.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Typ pracownika" />
+      <Button layoutX="31.0" layoutY="346.0" mnemonicParsing="false" onAction="#przelaczDoMainView" text="Dodaj pracownika" />
+      <RadioButton fx:id="dyspozytorRadioButton" layoutX="209.0" layoutY="74.0" mnemonicParsing="false" onAction="#wyburTypuPracownika" text="dyspozytor">
+         <toggleGroup>
+            <ToggleGroup fx:id="typ" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="kierowcaRadioButton" layoutX="211.0" layoutY="100.0" mnemonicParsing="false" onAction="#wyburTypuPracownika" text="kierowca" toggleGroup="$typ" />
+      <RadioButton fx:id="mechanikRadioButton" layoutX="209.0" layoutY="132.0" mnemonicParsing="false" onAction="#wyburTypuPracownika" text="mechanik" toggleGroup="$typ" />
+   </children>
+</AnchorPane>
