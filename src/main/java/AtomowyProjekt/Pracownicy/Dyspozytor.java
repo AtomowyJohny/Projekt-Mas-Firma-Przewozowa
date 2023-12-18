@@ -15,9 +15,8 @@ public class Dyspozytor extends Pracownik {
     }
 
     public void dodajDoEkstensji() {
-        if (!areErrors()){
+        if (!areErrors()) {
             pracownicy.add(this);
-            // pracownikEkstensja.add(this);
         }
     }
 

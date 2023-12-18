@@ -25,8 +25,7 @@ public class Mechanik extends Pracownik {
     }
 
     private void dodajDoEkstensji() {
-        if (!areErrors()){
-            // pracownikEkstensja.add(this);
+        if (!areErrors()) {
             pracownicy.add(this);
         }
     }
