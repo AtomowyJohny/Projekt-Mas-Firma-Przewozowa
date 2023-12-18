@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public abstract class Pracownik {
-    public static List<Pracownik> pracownikEkstensja = new ArrayList<>();
+public abstract class Pracownik implements Firma {
+//   public static List<Pracownik> pracownikEkstensja = new ArrayList<>();
 
     public String imie, nazwisko;
     public int wiek, dodatekOdLatPracy;
@@ -16,7 +16,6 @@ public abstract class Pracownik {
     public Long numerTelefonu = null;
     public double mnoznikWyplaty;
     public static int stawkaBazowa = 20;
-    public List<Autobus> autobusy = new ArrayList<>();
 
     public Pracownik(String imie, String nazwisko, long pesel, long numerTelefonu, Date dataZatrudnienia, double mnoznikWyplaty) {
         this.imie = imie;

@@ -58,7 +58,7 @@ public class MainViewController implements Initializable {
     }
 
     private void initPracownicyListView() {
-        for (Pracownik pracownik : Pracownik.pracownikEkstensja) {
+        for (Pracownik pracownik : Pracownik.pracownicy) {
             String danePracownika = pracownik.getClass().getSimpleName() + " " + pracownik.imie + " " + pracownik.nazwisko + " " + pracownik.pesel;
             listaPracownikow.add(danePracownika);
         }
@@ -141,7 +141,7 @@ public class MainViewController implements Initializable {
             }
         }
 
-        for (Pracownik pracownik : Pracownik.pracownikEkstensja) {
+        for (Pracownik pracownik : Pracownik.pracownicy) {
             if (pracownik.pesel == Long.parseLong(peselZaznaczonegoPracownika)) {
                 switch (zaznaczonyPracownik.split(" ")[0].toLowerCase()) {
                     case "kierowca":
@@ -175,7 +175,7 @@ public class MainViewController implements Initializable {
         }
 
         if (zaznaczonyAutobus != null) {
-            for (Pracownik pracownik : Pracownik.pracownikEkstensja) {
+            for (Pracownik pracownik : Pracownik.pracownicy) {
                 if (pracownik.pesel == (peselZaznaczonegoPracownika != null ? Long.parseLong(peselZaznaczonegoPracownika) : 0)) {
                     wybranyPracownik = pracownik;
                     break;

@@ -29,8 +29,11 @@ public class Kierowca extends Pracownik {
     }
 
     private void dodajDoEkstensji() {
-        if (!areErrors())
-            pracownikEkstensja.add(this);
+        if (!areErrors()){
+            //pracownikEkstensja.add(this);
+            pracownicy.add(this);
+        }
+
     }
 
     private boolean areErrors() {
